@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manuplation</title>
+    <style>
+         .navbar ul{
+            display: flex;
+            justify-content: center;   
+        }
+        .navbar ul li
+        {
+            list-style: none;
+            margin: 12px 6px;
+            padding: 7px 6px;
+        }
+        
+        .navbar ul li a{
+            text-decoration: none;
+            color:black;
+
+        }
+        .navbar ul li a:hover{
+            color: rgb(192, 192, 72);
+        
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <ul>
+            <li class="item" ><a href="#" id="first" >Home</a></li>
+            <li class="item"><a href="#">Services</a></li>
+            <li class="item"><a href="#">About us</a></li>
+          </ul>
+        </nav>
+      </header>
+
+
+      <script>
+        document.getElementById("first").style.color="pink";
+        document.getElementsByTagName("a")[0].style.color="blue";
+        document.querySelector('a').style.color="blue";
+        document.querySelectorAll('a')[2].style.color="orange";
+        document.getElementsByTagName('ul')[0].firstElementChild.style.background="purple";
+        document.getElementsByTagName('ul')[0].lastElementChild.style.background="red";
+        document.getElementsByClassName('item')[0].firstElementChild.style.color='white';
+        document.getElementsByClassName('item')[2].firstElementChild.style.color='white';
+
+
+        // some other methods of DOM manuplation 
+        console.log(document.getElementById("first").matches(".item"));
+        console.log(document.getElementById("first").closest(".item"));
+        console.log(document.getElementById('first').contains('.item'));
+        console.log(document.getElementByClass('.item').contains('#first'));
+    
+
+      </script>
+</body>
+</html>
